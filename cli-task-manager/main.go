@@ -17,9 +17,15 @@ type TaskList struct {
 }
 
 func main() {
-	// var tasks =  []Task{}
-	// tasks = append(tasks, Task{ID: 1, Description: "Sameer", Done: true})
-	
+	tasks := loadTask()
+	addTask(&tasks, "Task - 1")
+	addTask(&tasks, "Task - 2")
+	addTask(&tasks, "Task - 3")
+	addTask(&tasks, "Task - 4")
+	// Save data
+	saveData(&tasks)
+	// List tasks
+	listTasks(&tasks)
 }
 
 // Add tasks to task.json
